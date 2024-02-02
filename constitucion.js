@@ -190,11 +190,24 @@ class Artigo {
             }
         }
     }
-    mostrarCapitulo() {
-        console.log(`Pertence ao ${capituloString}`);
+    mostrarCapituloString() {
+        if (this.capituloString === "") {
+            return "Non pertence a ningún capítulo"
+        } else {
+            return "Pertence ao "+ this.capituloString
+        }
+    }
+    mostrarCapituloNonNumerado() {
+        if (this.capituloString === "") {
+            return "Non pertence a ningún capítulo"
+        } else {
+            let cap = this.capituloString.split('. ')[1];
+            return "O título do capítulo é \""+ cap + "\""
+        }
+        
     }
 }
 
 const artigo11 = new Artigo("1.1.0.11.1", "La nacionalidad española se adquiere, se conserva y se pierde de acuerdo con lo establecido por la ley");
 
-console.log(artigo11)
+console.log(artigo11.mostrarCapituloNonNumerado())
