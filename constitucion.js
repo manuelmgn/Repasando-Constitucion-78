@@ -139,74 +139,62 @@ const capitulos = [
     },
 ]
 
-const seccions = [
-    {
-        numero: 1,
-        id: "1.2.1",
-        texto: "Sección I. De los derechos fundamentales y de las libertades públicas"
-    },
-    {
-        numero: 2,
-        id: "1.2.2",
-        texto: "Sección II. De los derechos y deberes de los ciudadanos",
-    }
-]
-
 let artigos = [];
 
 
 class Artigo {
     constructor(numeracionCompleta, texto) {
         //numeracionCompleta: titulo.capitulo.seccion.articulo.punto
-        this.numeracionCompleta = numeracionCompleta.split('.');
-        this.texto = texto;
-        this.tituloNumero = numeracionCompleta[0];
+        this.numeracionCompleta = numeracionCompleta.split('.').map(Number);
+        this.tituloNumero = this.numeracionCompleta[0];
         this.tituloString = this.tituloString(this.tituloNumero);
+        this.capituloNumero = this.numeracionCompleta[1];
+        this.capituloString = this.capituloString(this.numeracionCompleta);
+        this.seccionNumero = this.numeracionCompleta[2];
+        this.seccionString = this.seccionString(this.numeracionCompleta);
+        this.artigoNumero = this.numeracionCompleta[3];
+        this.puntoNumero = this.numeracionCompleta[4];
+        this.texto = texto;
 
     }
     tituloString(tituloNumero) {
         if (tituloNumero) {
-            const tituloEncontrado = titulos.find( tit => tit.id === tituloNumero)
+            const tituloEncontrado = titulos.find( tit => tit.id === tituloNumero.toString())
             return tituloEncontrado.texto
         } else {
             return "Erro"
         }
     }
-}
-    /*numeracionCompleta: [],
-    tituloNumero() {
-        return this.numeracionCompleta[0];
-    }
-    tituloString() {
-        this.tituloNumero = tituloNumero;
-        if (tituloNumero) {
-            const tituloEncontrado = titulos.find( tit => tit.id === tituloNumero)
-            return tituloEncontrado.texto
+    capituloString(numeracionCompleta) {
+        if (numeracionCompleta[1] === 0) {
+            return ""
         } else {
-            return "Erro"
+            let capituloNumero = numeracionCompleta[0].toString().concat(".", numeracionCompleta[1].toString());
+            if (capituloNumero) {
+                const capituloEncontrado = capitulos.find( cap => cap.id === capituloNumero)
+                return capituloEncontrado.texto
+            } else {
+                return "Erro"
+            }
         }
-    },
-    capituloString: "",
-    capituloNumero() {
-        return this.numeracionCompleta[1];
-    },
-    seccionString: "",
-    seccionNumero() {
-        return this.numeracionCompleta[2];
-    },
-    artigoNumero() {
-        return this.numeracionCompleta[3];
-    },
-    texto: "",
+    }
+    seccionString(numeracionCompleta) {
+        if (numeracionCompleta[2] === 0) {
+            return ""
+        } else {
+            let seccionNumero = numeracionCompleta[0].concat(".", numeracionCompleta[1], ".", numeracionCompleta[2]);
+            switch (seccionNumero) {
+                case "1.2.1": return "Sección I. De los derechos fundamentales y de las libertades públicas"; break;
+                case "1.2.2": return "Sección II. De los derechos y deberes de los ciudadanos"; break;
+                default: return "Erro"; break;
+            }
+        }
+    }
     mostrarCapitulo() {
         console.log(`Pertence ao ${capituloString}`);
-    },
-    
-}*/
+    }
+}
 
 const artigo11 = new Artigo("1.1.0.11.1", "La nacionalidad española se adquiere, se conserva y se pierde de acuerdo con lo establecido por la ley");
 
 console.log(artigo11)
-
-
-const a = "1.1.0.11.1".split('.')
