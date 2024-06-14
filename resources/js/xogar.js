@@ -237,7 +237,7 @@ function xerarArtigo(id, seleccionDificultade = 2) {
     let tituloArray = id.split('.')
     let titulo = parseInt(tituloArray[0])
     switch(seleccionDificultade) {
-        case 1: artigo = xerarNumeroCercano(titulo, 3); break;
+        case 1: artigo = xerarNumeroCercano(titulo, 2); break;
         case 2: artigo = xerarNumeroCercano(titulo, 1.3); break;
         case 3: artigo = xerarNumeroCercano(titulo, 0.9); break;
     }

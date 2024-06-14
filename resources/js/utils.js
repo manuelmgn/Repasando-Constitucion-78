@@ -116,7 +116,7 @@ export function chequearDuplicadosArray(array, idSolucion) {
                 let novoValor
                 let novoArtigo
                 do {
-                    novoValor = xerarNumeroCercano(titulo, 2)
+                    novoValor = xerarNumeroCercano(titulo, 1.5)
                     if (novoValor === 0) {
                         novoValor = novoValor + 1
                     }
