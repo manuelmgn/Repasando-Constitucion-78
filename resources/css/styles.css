@@ -61,6 +61,7 @@ nav > ul {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: right;
 }
 
 nav > #logo {
@@ -302,6 +303,10 @@ h3 {
 }
 
 @media only screen and (max-width: 700px) {
+    #respostas {
+        margin: auto;
+        padding-bottom: 50px;
+    }
     #radios > label {
         margin: 0.2rem;
         font-size: 100%;
