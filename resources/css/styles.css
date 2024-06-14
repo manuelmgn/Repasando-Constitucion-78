@@ -50,17 +50,15 @@ nav {
     justify-content: space-between;
 }
 
-nav > ul {
-    z-index: 1000;
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 1rem;
-}
 
-nav > #logo {
-    margin: 1rem;
-    font-weight: 800;
+@media only screen and (max-width: 500px) {
+    #lisobre {
+        display: none;
+    }
+
+    nav > ul {
+        grid-template-columns: repeat(2, auto);
+    }
 }
 @media only screen and (max-width: 700px) {
     .logopeq {
@@ -71,6 +69,18 @@ nav > #logo {
         font-size: 118%;
         display: block;
     }
+    nav > ul {
+        z-index: 1000;
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        gap: 0.6rem;
+    }
+    
+    nav > #logo {
+        margin: 0.8rem;
+        font-weight: 800;
+    }
 }
 @media only screen and (min-width: 700px) {
     .logopeq {
@@ -78,6 +88,18 @@ nav > #logo {
     }
     .logogran {
         font-size: 118%;
+    }
+    nav > ul {
+        z-index: 1000;
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        gap: 1rem;
+    }
+    
+    nav > #logo {
+        margin: 1rem;
+        font-weight: 800;
     }
 }
 
