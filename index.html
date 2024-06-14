@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/resources/css/styles.css" />
+        <link rel="stylesheet" href="/resources/css/modals.css" />
+        <title>Repasando la Constitución</title>
+    </head>
+
+    <body>
+        <header id="headerindex">
+            <nav>
+                <div id="logo">
+                        <h1>
+                            <span class="logopeq">Repasando la</span>
+                            <span class="logogran">Constitución</span>
+                        </h1>
+                </div>
+                <ul>
+                    <li><a href="#" id="clickModalModos">Modalidades</a></li>
+                    <li><a href="#" id="clickModalAxuda">Ayuda</a></li>
+                    <li><a href="#" id="clickModalSobre">Sobre</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="modalModos" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form action="" class="form-modos" id="form-modos">
+                    <p id="cabeceira-benvida" class="modalcabeceira">
+                        ¡Hola! Vamos a repasar la Constitución del 78 😪.
+                    </p>
+                    <p class="optionformtitle">Modo de juego:</p>
+                    <p class="opcionesform">
+                        <input
+                            type="radio"
+                            name="xogo-modo"
+                            id="numero-puntos"
+                            checked
+                        />
+                        <label for="numero-puntos">Numerar artículos</label>
+                        <input
+                            type="radio"
+                            name="xogo-modo"
+                            id="preguntas-completar"
+                        />
+                        <label for="preguntas-completar">Completar textos</label>
+                    </p>
+                    <p id="dificultade-pregunta" class="optionformtitle">Dificultad:</p>
+                    <p id="dificultade-opcions" class="opcionesform">
+                        <input
+                            type="radio"
+                            name="xogo-dificultade"
+                            id="dificultade-1"
+                            checked
+                        />
+                        <label for="dificultade-1">Fácil</label>
+                        <input
+                            type="radio"
+                            name="xogo-dificultade"
+                            id="dificultade-2"
+                            checked
+                        />
+                        <label for="dificultade-2">Intermedia</label>
+                        <input
+                            type="radio"
+                            name="xogo-dificultade"
+                            id="dificultade-3"
+                        />
+                        <label for="dificultade-3">Difícil</label>
+                    </p>
+                    <p class="optionformtitle">Títulos:</p>
+                    <p id="titulos" class="opcionesform">
+                        <input
+                            type="checkbox"
+                            name="titulos"
+                            class="titulos"
+                            id="titpre"
+                            checked
+                        />
+                        <label for="titpre">Preliminar</label>
+                        <input
+                            type="checkbox"
+                            name="titulos"
+                            class="titulos"
+                            id="tit1"
+                            checked
+                        />
+                        <label for="tit1">I</label>
+                        <input
+                            type="checkbox"
+                            name="titulos"
+                            class="titulos"
+                            id="tit2"
+                            checked
+                        />
+                        <label for="tit2">II</label>
+                        <input
+                            type="checkbox"
+                            name="titulos"
+                            class="titulos"
+                            id="tit3"
+                            checked
+                        />
+                        <label for="tit3">III</label>
+                        <input
+                            type="checkbox"
+                            name="titulos"
+                            class="titulos"
+                            id="tit8"
+                            checked
+                        />
+                        <label for="tit8">VIII</label>
+                    </p>
+                    <p class="optionformtitle">Número de preguntas:</p>
+                    <p id="numero-preguntas" class="opcionesform">
+                        <input
+                            type="range"
+                            name="num-preguntas"
+                            id="num-preguntas"
+                            min="0"
+                            max="200"
+                            value="100"
+                            step="10"
+                        />
+                        <span id="valor-rango"></span>
+                    </p>
+                    <input
+                        type="submit"
+                        id="boton-enviar-modo"
+                        class="botons"
+                        value="Iniciar"
+                        aria-label="Iniciar"
+                    />
+                </form>
+            </div>
+        </div>
+
+        <div id="modalSobre" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p class="modalcabeceira">Sobre este juego</p>
+                <p>Este juego es simplemente una pequeña aplicación pensada para estudiar y repasar la Constitución Española del 78 para aquellas persones que preparen oposiciones.</p>
+                <p>Si te interesa conocer cómo funciona o quieres proponer alguna modificación, visita mi <a href="https://github.com/manuelmgn">GitHub</a> o crea un nuevo <em><a href="https://github.com/manuelmgn/Repasando-Constitucion-78/issues">issue</a></em> en el repositorio del proyecto.</p>
+                <p>La tipografía usada es <a href="https://www.fontshare.com/?q=Gambarino">Gambarino</a> de Fontshare y la fuente del texto <a href="https://es.wikisource.org/wiki/Constituci%C3%B3n_espa%C3%B1ola_de_1978">Wikisource</a>.</p>
+            </div>
+        </div>
+        <div id="modalAxuda" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p class="modalcabeceira">Ayuda</p>
+                <dl>
+                    <dt>Cómo jugar</dt>
+                    <dd>Selecciona o escribe la opción que consideres acertada. Si te equivocas, verás un  breve flash rojo y, si no, se mostrará un flash verde y se saltará de pregunta.</dd>
+                    <dd>Si te atascas, haz clic en "No sé" y se marcará o se escrbirá la opción correcta. Esta no se tendrá en cuenta en la puntuación</dd>
+                    <dt>Completar textos</dt>
+                    <dd>Esta modalidad consiste en escribir la palabra o palabras que faltan en el texto. Debe ser el término exacto y con sus acentos, aunque puedes obviar las minúsculas y mayúsculas.</dd>
+                    <dt>Numerar artículos</dt>
+                    <dd>Deberás acertar el número de un punto y un artículo dado. Según el nivel de dificultad, habrá más o menos opciones y estas serán más o menos semejantes.</dd>
+                    <dt>Puntuación</dt>
+                    <dd>Sólo se tienen en cuenta los aciertos, sin importar el número de intentos.</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="content" id="content-xogo">
+            <div id="metade1" class="metades">
+                <div class="preguntas">
+                    <h3 id="nPregunta"></h3>
+                    <p id="preguntaUno"></p>
+                    <p id="preguntaDos"></p>
+                </div>
+            </div>
+            <div id="metade2" class="metades">
+                <form id="respostas">
+                    <input
+                        type="text"
+                        name="textocompletar"
+                        id="textocompletar"
+                        placeholder="Respuesta"
+                        artia-label="Respuesta"
+                    />
+                    <div id="botons">
+                        
+                    </div>
+                </form>
+                <div id="resultado"></div>
+            </div>
+        </div>
+        <script type="module" src="/resources/js/main.js"></script>
+    </body>
+</html>

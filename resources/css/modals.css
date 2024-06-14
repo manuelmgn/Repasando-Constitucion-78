@@ -1,0 +1,101 @@
+/* ---------------------- MODALS ---------------------- */
+
+/* Modal */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Content */
+.modal-content {
+    background: rgb(255, 255, 255);
+    color: var(--vermelho2);
+    font-weight: 500;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px 0 rgba(#000, 0.25);
+    @media (max-width: 700px) {
+        width: 65%;
+    }
+    @media (min-width: 700px) {
+        width: 50%;
+    }
+}
+
+/* The Close Button */
+.close {
+    color: var(--vermelho2);
+    float: right;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modalcabeceira {
+    border-bottom: 1px solid rgba(161, 161, 161, 0.344);
+    padding-bottom: 1em;
+    margin-top: 0.6em;
+}
+
+.opcionesform {
+    margin-top: 0.6rem;
+    margin-left: 1rem;
+    font-size: 95%;
+}
+
+.opcionesform > label {
+    /*margin-right: 0.5rem;*/
+}
+
+.optionformtitle {
+    margin-bottom: 0rem;
+    margin-top: 1.2rem;
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    /*#modalAxuda > * > .modalcabeceira {
+        display: none;
+    }*/
+
+    .modal-content > * > dd {
+        margin: 0.3em 0em 0.1em 1em;
+        font-size: 90%;
+    }
+    
+    .modal-content > * > dt {
+        font-size: 95%;
+        font-variant: small-caps;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .modal-content > * > dd {
+        margin: 0.4em 0em 0.2em 1.2em;
+        font-size: 98%;
+    }
+    
+    .modal-content > * > dt {
+        font-size: 105%;
+        font-variant: small-caps;
+    }
+}
