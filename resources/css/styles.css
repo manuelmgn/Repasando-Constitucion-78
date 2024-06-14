@@ -8,8 +8,11 @@
 }
 
 @font-face {
-    font-family: 'gambarinofont';
-    src: url('resources/other/Gambarino_Complete/Fonts/WEB/fonts/Gambarino-Regular.woff2');
+    font-family: gambarinofont;
+    src: url('resources/other/Gambarino_Complete/Fonts/WEB/fonts/Gambarino-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-style: normal;
 }
 
 html,
