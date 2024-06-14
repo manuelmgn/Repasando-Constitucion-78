@@ -1071,12 +1071,12 @@ export const preguntasCompletarTitulo3 = [
     {
         tit: 'Artículo 73',
         texto: 'Las Cámaras se reunirán anualmente en dos períodos ordinarios de sesiones: el primero, de __________ a diciembre, y el segundo de febrero a junio.',
-        solucion: 'septiembre'
+        solucion: 'septiembre',
     },
     {
         tit: 'Artículo 73',
         texto: 'Las Cámaras se reunirán anualmente en dos períodos ordinarios de sesiones: el primero, de septiembre a diciembre, y el segundo de __________ a junio.',
-        solucion: 'febrero'
+        solucion: 'febrero',
     },
     {
         tit: 'Artículo 74',
@@ -1176,7 +1176,7 @@ export const preguntasCompletarTitulo3 = [
     {
         tit: 'Artículo 87',
         texto: 'La iniciativa legislativa corresponde al __________, al Congreso y al Senado.',
-        solucion: 'Gobierno'
+        solucion: 'Gobierno',
     },
     {
         tit: 'Artículo 88',

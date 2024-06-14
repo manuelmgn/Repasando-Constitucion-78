@@ -85,6 +85,7 @@ export function preChecks() {
     document.querySelectorAll('input[name=titulos]').forEach((input) => {
         input.checked = true
     })
+    document.querySelector('#dificultade-2').checked = true
     document.querySelector('#num-preguntas').value = 100
 }
 
