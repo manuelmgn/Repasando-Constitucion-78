@@ -232,6 +232,9 @@ h3 {
 }
 
 @media only screen and (max-width: 700px) {
+    .preguntas {
+        padding-top: 20px;
+    }
     #preguntaDos {
         text-overflow: ellipsis;
         overflow: hidden;
