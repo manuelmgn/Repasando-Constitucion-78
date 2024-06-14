@@ -4,12 +4,13 @@
     --vermelho: #7e354d;
     --vermelho2: #900c3f;
     --vermelho3: #42071b;
-    --serifada: 'gambarinofont', 'Arial', fo'Times New Roman', Times, serif;
+    --serifada: 'gambarinofont', 'Arial', fo 'Times New Roman', Times, serif;
 }
 
 @font-face {
     font-family: 'gambarinofont';
-    src: url('../other/Gambarino_Complete/Fonts/WEB/fonts/Gambarino-Regular.woff2') format('woff2');
+    src: url('../other/Gambarino_Complete/Fonts/WEB/fonts/Gambarino-Regular.woff2')
+        format('woff2');
     font-weight: 400;
     font-style: normal;
 }
@@ -50,36 +51,52 @@ nav {
     justify-content: space-between;
 }
 
-
-@media only screen and (max-width: 500px) {
-    #lisobre {
-        display: none;
-    }
-
-    nav > ul {
-        grid-template-columns: repeat(2, auto);
-    }
+.logopeq, .logogran {
+    display: block;
 }
-@media only screen and (max-width: 700px) {
+
+nav > ul {
+    z-index: 1000;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+nav > #logo {
+    font-weight: 800;
+}
+
+@media only screen and (max-width: 450px) {
     .logopeq {
         font-size: 110%;
-        display: block;
     }
     .logogran {
         font-size: 118%;
-        display: block;
     }
+
     nav > ul {
-        z-index: 1000;
-        list-style-type: none;
-        display: grid;
-        grid-template-columns: repeat(3, auto);
-        gap: 0.6rem;
+        gap: 10px;
     }
-    
+
     nav > #logo {
         margin: 0.8rem;
-        font-weight: 800;
+    }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 700px) {
+    .logopeq {
+        font-size: 110%;
+    }
+    .logogran {
+        font-size: 118%;
+    }
+    nav > ul {
+        gap: 0.6rem;
+    }
+
+    nav > #logo {
+        margin: 0.8rem;
     }
 }
 @media only screen and (min-width: 700px) {
@@ -90,16 +107,11 @@ nav {
         font-size: 118%;
     }
     nav > ul {
-        z-index: 1000;
-        list-style-type: none;
-        display: grid;
-        grid-template-columns: repeat(3, auto);
         gap: 1rem;
     }
-    
+
     nav > #logo {
         margin: 1rem;
-        font-weight: 800;
     }
 }
 
